@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-mode="light" data-chakra="thirdeye" data-minimal-applet="true">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.I.A. — Decentralized Intelligence Agency (dia.onetruedao.com)</title>
+  <link rel="stylesheet" href="/evolve-unified-theme.css?v=20261103">
+  <link rel="stylesheet" href="/chakras.css?v=20261103">
+</head>
+<body>
+<div class="beam-minimal-shell">
+
+  <div class="beam-header">
+    <div>
+      <h1>D.I.A. — Decentralized Intelligence Agency</h1>
+      <p>Open-Source Constitutional AI Bridge Hooking ICP (Internet Computer Canister) &amp; Bittensor (Subtensor EVM + Healing Subnet) Into <code>dia.onetruedao.com</code>.</p>
+    </div>
+    <span class="state ok" id="dia-live-badge">ICP + BITTENSOR LIVE</span>
+  </div>
+
+  <main>
+    <div class="beam-dropzone" id="dia-console-card">
+      <h2 class="beam-dropzone-title" id="dia-headline">01 · Dispatch a Live D.I.A. Intelligence &amp; Flourishing Mission</h2>
+      <p class="beam-dropzone-sub">
+        Select a 7-Chakra Intelligence Desk below, set the 21-Amplitude Prism Flow &amp; Sadhana Streak, and click Dispatch to execute the ICP Canister + Chain-Key ECDSA + Bittensor Subnet pipeline.
+      </p>
+
+      <div class="ee-choice-grid">
+        <div class="list-card">
+          <span class="law-pill">01 · SELECT D.I.A. INTELLIGENCE DESK (07 CROWN &rarr; 01 ROOT)</span>
+          <label for="dia-desk">Active D.I.A. Mission Desk</label>
+          <select id="dia-desk" onchange="runDiaSimulation()">
+            <option value="Desk07CrownConstitutional">01 · 07 Crown Desk — Constitutional AI & Five-Element (Wu Xing) Harmony Audit</option>
+            <option value="Desk06ThirdEyeDeepResearch">02 · 06 Third Eye Desk — Visionary Deep Research, BIFL Curation & Epigenetic Insight</option>
+            <option value="Desk05ThroatTruthVerification">03 · 05 Throat Desk — Open-Source Truth Verification & Sub-20ms Edge Broadcast</option>
+            <option value="Desk04HeartCoWitnessMediation">04 · 04 Heart Desk — Oshna Soft-Strength Mediation & Co-Witness Escrow</option>
+            <option value="Desk03SolarAgniResourceAlchemy">05 · 03 Solar Desk — Sattvic Agni, Ayurvedic Rasayana & $PRANA Minting</option>
+            <option value="Desk02SacralCreativeArtCuration">06 · 02 Sacral Desk — 108-Category Original Art Contest & Dyad Co-Regulation</option>
+            <option value="Desk01RootSanctuaryResilience">07 · 01 Root Desk — Physical Earth Sanctuary, Solar/Water & Seed Sovereignty</option>
+          </select>
+
+          <label for="dia-query">Intelligence Mission or Healing Objective</label>
+          <input type="text" id="dia-query" value="Verify 45-day SoulSignature flow lift on Subtensor EVM &amp; authorize 40/30/30 Earth Sanctuary grant" oninput="runDiaSimulation()">
+
+          <label for="dia-pool">Active DAO Treasury / Art Raffle Cycle Volume (USD / ICP Equiv.)</label>
+          <input type="number" id="dia-pool" value="30000" min="100" step="500" oninput="runDiaSimulation()">
+        </div>
+
+        <div class="list-card">
+          <span class="law-pill">02 · 21-AMPLITUDE PRISM &amp; BITTENSOR SUBNET INPUTS</span>
+          <label for="dia-flow-before">Baseline Prism Flow 45 Days Ago (<code>flow_before</code>: 0–100)</label>
+          <input type="number" id="dia-flow-before" value="64" min="0" max="100" oninput="runDiaSimulation()">
+
+          <label for="dia-flow-now">Current 21-Amplitude Prism Flow (<code>SoulSignature.flowOf()</code>: 0–100)</label>
+          <input type="number" id="dia-flow-now" value="88" min="0" max="100" oninput="runDiaSimulation()">
+
+          <label for="dia-days">Verified Practice Consistency Streak (Days &ge; 14 for Subnet Lag Gate)</label>
+          <input type="number" id="dia-days" value="45" min="1" max="365" oninput="runDiaSimulation()">
+        </div>
+      </div>
+
+      <div class="ee-transport">
+        <button type="button" class="ee-btn-hero" onclick="runDiaSimulation(true)">
+          01 · Dispatch D.I.A. Mission Across ICP Canister + Bittensor Subnet
+        </button>
+        <button type="button" class="btn-secondary" onclick="window.open('https://onecoded.github.io/onetruedao/', '_blank')">
+          02 · Open TheOneTrueDAO Main Portal (onetruedao.com)
+        </button>
+        <button type="button" class="btn-secondary" onclick="window.open('https://onecoded.github.io/evolveearth-portal/', '_blank')">
+          03 · Open EvolveEarth Bittensor EVM Portal
+        </button>
+      </div>
+
+      <div class="beam-status-line" id="dia-toast">Ready — ICP Motoko Canister (the_one_true_dao_canister.mo) &lt;-&gt; Bittensor Subtensor EVM (Chain ID 964) Bridge Active</div>
+    </div>
+
+    <section class="beam-sent-section">
+      <span class="beam-sent-label">Live Cross-Chain Intelligence &amp; Governance Readout (ICP Canister &lt;-&gt; Bittensor Subtensor EVM)</span>
+      <div class="ee-choice-grid">
+        <div class="list-card" id="dia-readout-summary"></div>
+        <div class="list-card">
+          <span class="law-pill">LIVE ICP CHAIN-KEY ECDSA &amp; BITTENSOR CALLDATA</span>
+          <pre id="dia-code-out"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="beam-footer">
+    <details class="ee-drawer">
+      <summary class="ee-drawer-summary">
+        <span>How ICP + Bittensor Hook Into <code>dia.onetruedao.com</code>, Custom Domain CNAME Setup &amp; All 13 Live Sites</span>
+        <span class="obj-lvl">ARCHITECTURE &amp; DNS</span>
+      </summary>
+
+      <div class="ee-choice-grid">
+        <div class="list-card">
+          <span class="law-pill">01 · HOW ICP &amp; BITTENSOR WORK TOGETHER AS ONE ORGANISM</span>
+          <h3>Why D.I.A. Uses Both ICP and Bittensor</h3>
+          <ul>
+            <li><strong>Bittensor Is the Decentralized Neural Brain (Subtensor EVM Chain ID 964 + Subnet):</strong> Hosts <code>SoulSignature.sol</code> (the ERC-721 21-Amplitude Prism Mandala), <code>PranaToken.sol</code> (<code>$PRANA</code> minted only by verified daily practice), <code>WitnessEscrow.sol</code>, and <code>flourishing_reward.py</code> — which rewards AI miners in native <code>TAO</code> <strong>only</strong> when humans show verified 14–90 day longitudinal improvement in <code>SoulSignature.flowOf()</code>.</li>
+            <li><strong>ICP Is the Unstoppable Sovereign Body (<code>the_one_true_dao_canister.mo</code>):</strong> Serves <code>dia.onetruedao.com</code> and <code>onetruedao.com</code> 100% from on-chain canister storage with reverse-gas (zero gas fees for users), runs the Five-Element Constitutional AI Council, and uses <strong>ICP Chain-Key ECDSA (<code>sign_with_ecdsa</code>)</strong> + <strong>HTTPS Outcalls</strong> to read and sign Bittensor Subtensor EVM transactions without any centralized bridge.</li>
+            <li><strong>Privacy Zone 0 Law:</strong> Personal <code>02 Sacral</code> files and private <code>soul-bands.json</code> data remain 100% sealed on local hardware. Only consented, anonymized flow scores touch Bittensor or ICP.</li>
+          </ul>
+        </div>
+
+        <div class="list-card">
+          <span class="law-pill">02 · POINT DIA.ONETRUEDAO.COM IN 30 SECONDS</span>
+          <h3>Live Global Edge URLs &amp; Subdomain Cutover</h3>
+          <p><strong>Live Dedicated Edge Portal:</strong> <a href="https://onecoded.github.io/dia-onetruedao/" target="_blank">https://onecoded.github.io/dia-onetruedao/</a></p>
+          <p><strong>Live Path on TheOneTrueDAO:</strong> <a href="https://onecoded.github.io/onetruedao/dia.html" target="_blank">https://onecoded.github.io/onetruedao/dia.html</a></p>
+          <p>To point <code>dia.onetruedao.com</code> in your DNS panel (iPage / Cloudflare), add one <code>CNAME</code> record:</p>
+          <ul>
+            <li><strong>Type:</strong> <code>CNAME</code></li>
+            <li><strong>Host / Name:</strong> <code>dia</code></li>
+            <li><strong>Target / Points To:</strong> <code>onecoded.github.io</code></li>
+          </ul>
+          <div class="ee-transport">
+            <button type="button" class="btn-secondary" onclick="navigator.clipboard.writeText('dia');document.getElementById('dia-toast').textContent='Copied CNAME Host: dia'">01 · Copy Host: dia</button>
+            <button type="button" class="btn-secondary" onclick="navigator.clipboard.writeText('onecoded.github.io');document.getElementById('dia-toast').textContent='Copied CNAME Target: onecoded.github.io'">02 · Copy Target: onecoded.github.io</button>
+            <button type="button" class="btn-secondary" onclick="bindDiaSubdomain()">03 · Auto-Bind dia.onetruedao.com on Edge</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="model">
+        <div class="mh">
+          <span class="obj-lvl">7-CHAKRA INTELLIGENCE DESKS</span>
+          <strong>All 7 D.I.A. Desks Along the 07 Crown &rarr; 01 Root &rarr; 07 Crown Spine</strong>
+          <span class="state ok">7 / 7 ACTIVE</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Chakra Gate</th>
+              <th>D.I.A. Desk &amp; Connected Website</th>
+              <th>ICP Motoko Canister Function</th>
+              <th>Bittensor EVM &amp; Subnet Function</th>
+              <th>Mission Mandate</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td><strong>07 Crown · 963 Hz · Sahasrara</strong></td>
+              <td><strong>01 · 07 Crown Desk — Constitutional AI & Five-Element (Wu Xing) Harmony Audit</strong><br><a href="https://onecoded.github.io/onetruedao/" target="_blank">onetruedao.com</a></td>
+              <td><code>TheOneTrueDAO.evaluateDIAMission(#Desk07CrownConstitutional, ...)</code></td>
+              <td><code>MirrorDAO.votingPowerOf(soul) + Chutes Constitutional Consensus</code></td>
+              <td>Audits every DAO proposal against the Three Treasures (Compassion, Frugality, Humility), enforces the 1.618% Water-Law anti-whale cap, and verifies that all 5 elements score >= 0.60.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>06 Third Eye · 852 Hz · Ajna</strong></td>
+              <td><strong>02 · 06 Third Eye Desk — Visionary Deep Research, BIFL Curation & Epigenetic Insight</strong><br><a href="https://onecoded.github.io/bestofmusthave/" target="_blank">bestofmusthave.com & dnaraw.com</a></td>
+              <td><code>TheOneTrueDAO.evaluateDIAMission(#Desk06ThirdEyeDeepResearch, ...)</code></td>
+              <td><code>flourishing_reward.py (14-90 Day Somatic & HRV Recovery Delta)</code></td>
+              <td>Synthesizes multi-miner Bittensor intelligence for Buy-It-For-Life material toxicology (bestofmusthave.com) and 7-Plexus autonomic nervous-system recovery (dnaraw.com).</td>
+            </tr>
+            
+            <tr>
+              <td><strong>05 Throat · 741 Hz · Vishuddha</strong></td>
+              <td><strong>03 · 05 Throat Desk — Open-Source Truth Verification & Sub-20ms Edge Broadcast</strong><br><a href="https://onecoded.github.io/seowebandvideo/" target="_blank">seowebandvideo.com</a></td>
+              <td><code>TheOneTrueDAO.evaluateDIAMission(#Desk05ThroatTruthVerification, ...)</code></td>
+              <td><code>Subtensor Provenance Attestation & Documentary Signal</code></td>
+              <td>Verifies primary-source provenance, strips manipulative algorithms, and publishes transparent public reports and 4K stories across the Global Edge CDN.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>04 Heart · 639 Hz · Anahata</strong></td>
+              <td><strong>04 · 04 Heart Desk — Oshna Soft-Strength Mediation & Co-Witness Escrow</strong><br><a href="https://onecoded.github.io/oshna/" target="_blank">oshna.com</a></td>
+              <td><code>TheOneTrueDAO.evaluateDIAMission(#Desk04HeartCoWitnessMediation, ...)</code></td>
+              <td><code>WitnessEscrow.sol + MedicineStory & EntangledPrisms (Civilization.sol)</code></td>
+              <td>Coordinates human co-witness attestations on WitnessEscrow.sol (rewarding witnesses with 10 $PRANA) and directs the 30% Mutual-Aid & Patronage pool.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>03 Solar Plexus · 528 Hz · Manipura</strong></td>
+              <td><strong>05 · 03 Solar Desk — Sattvic Agni, Ayurvedic Rasayana & $PRANA Minting</strong><br><a href="https://onecoded.github.io/poweryogadiet/" target="_blank">poweryogadiet.com</a></td>
+              <td><code>TheOneTrueDAO.evaluateDIAMission(#Desk03SolarAgniResourceAlchemy, ...)</code></td>
+              <td><code>PranaToken.sol (10 $PRANA/day + 2x/3x 30/108-Day Streak Multiplier)</code></td>
+              <td>Prescribes Vata/Pitta/Kapha Sattvic nutrition & 10 classical Ayurvedic herbs while minting non-speculative $PRANA from verified daily sadhana.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>02 Sacral · 417 Hz · Svadhisthana</strong></td>
+              <td><strong>06 · 02 Sacral Desk — 108-Category Original Art Contest & Dyad Co-Regulation</strong><br><a href="https://onecoded.github.io/tantricunity/" target="_blank">tantricunity.com & onetruedao.com</a></td>
+              <td><code>TheOneTrueDAO.computeCreativeArtRaffleSplit(poolAmount)</code></td>
+              <td><code>EntangledPrisms Dyad Coherence (Privacy Zone 0 Sealed)</code></td>
+              <td>Runs the 108-Category Original Art Contest & Creative Earth-Healing Raffles (40% Artist / 30% Patron / 30% Earth Sanctuary) while keeping personal 02 Sacral data 100% sealed.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>01 Root · 396 Hz · Muladhara</strong></td>
+              <td><strong>07 · 01 Root Desk — Physical Earth Sanctuary, Solar/Water & Seed Sovereignty</strong><br><a href="https://onecoded.github.io/preprestore/" target="_blank">evolveearth.org & preprestore.com</a></td>
+              <td><code>TheOneTrueDAO.evaluateDIAMission(#Desk01RootSanctuaryResilience, ...)</code></td>
+              <td><code>SoulSignature.sol (ERC-721 Prism) + PranaPool.sol Land Grants</code></td>
+              <td>Anchors the ERC-721 Prism mandala on Bittensor Subtensor EVM (Chain ID 964) and routes 30% of every DAO cycle into physical land, solar/water resilience, and heirloom seed vaults.</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <div class="beam-footer-links">
+      <span>D.I.A. Canister: <code>the_one_true_dao_canister.mo</code> · Subtensor EVM: <code>Chain ID 964</code></span>
+      <span>
+        <a href="https://onecoded.github.io/dia-onetruedao/" target="_blank">Live D.I.A. Edge</a> ·
+        <a href="https://onecoded.github.io/onetruedao/" target="_blank">TheOneTrueDAO</a> ·
+        <a href="https://onecoded.github.io/evolveearth-portal/" target="_blank">EvolveEarth EVM</a> ·
+        <a href="https://onecoded.github.io/seven-sacred-gates/chakra-destiny.html" target="_blank">Seven Sacred Gates</a> ·
+        <a href="https://onecoded.github.io/bestofmusthave/" target="_blank">BestOfMustHave</a> ·
+        <a href="https://onecoded.github.io/oshna/" target="_blank">Oshna</a> ·
+        <a href="https://onecoded.github.io/preprestore/" target="_blank">PrepRestore</a>
+      </span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var DIA_DESK_DATA = [{"id": "Desk07CrownConstitutional", "gate": "07 Crown \u00b7 963 Hz \u00b7 Sahasrara", "chakra": "crown", "name": "01 \u00b7 07 Crown Desk \u2014 Constitutional AI & Five-Element (Wu Xing) Harmony Audit", "site": "onetruedao.com", "site_url": "https://onecoded.github.io/onetruedao/", "icp_fn": "TheOneTrueDAO.evaluateDIAMission(#Desk07CrownConstitutional, ...)", "bt_fn": "MirrorDAO.votingPowerOf(soul) + Chutes Constitutional Consensus", "mission_brief": "Audits every DAO proposal against the Three Treasures (Compassion, Frugality, Humility), enforces the 1.618% Water-Law anti-whale cap, and verifies that all 5 elements score >= 0.60."}, {"id": "Desk06ThirdEyeDeepResearch", "gate": "06 Third Eye \u00b7 852 Hz \u00b7 Ajna", "chakra": "thirdeye", "name": "02 \u00b7 06 Third Eye Desk \u2014 Visionary Deep Research, BIFL Curation & Epigenetic Insight", "site": "bestofmusthave.com & dnaraw.com", "site_url": "https://onecoded.github.io/bestofmusthave/", "icp_fn": "TheOneTrueDAO.evaluateDIAMission(#Desk06ThirdEyeDeepResearch, ...)", "bt_fn": "flourishing_reward.py (14-90 Day Somatic & HRV Recovery Delta)", "mission_brief": "Synthesizes multi-miner Bittensor intelligence for Buy-It-For-Life material toxicology (bestofmusthave.com) and 7-Plexus autonomic nervous-system recovery (dnaraw.com)."}, {"id": "Desk05ThroatTruthVerification", "gate": "05 Throat \u00b7 741 Hz \u00b7 Vishuddha", "chakra": "throat", "name": "03 \u00b7 05 Throat Desk \u2014 Open-Source Truth Verification & Sub-20ms Edge Broadcast", "site": "seowebandvideo.com", "site_url": "https://onecoded.github.io/seowebandvideo/", "icp_fn": "TheOneTrueDAO.evaluateDIAMission(#Desk05ThroatTruthVerification, ...)", "bt_fn": "Subtensor Provenance Attestation & Documentary Signal", "mission_brief": "Verifies primary-source provenance, strips manipulative algorithms, and publishes transparent public reports and 4K stories across the Global Edge CDN."}, {"id": "Desk04HeartCoWitnessMediation", "gate": "04 Heart \u00b7 639 Hz \u00b7 Anahata", "chakra": "heart", "name": "04 \u00b7 04 Heart Desk \u2014 Oshna Soft-Strength Mediation & Co-Witness Escrow", "site": "oshna.com", "site_url": "https://onecoded.github.io/oshna/", "icp_fn": "TheOneTrueDAO.evaluateDIAMission(#Desk04HeartCoWitnessMediation, ...)", "bt_fn": "WitnessEscrow.sol + MedicineStory & EntangledPrisms (Civilization.sol)", "mission_brief": "Coordinates human co-witness attestations on WitnessEscrow.sol (rewarding witnesses with 10 $PRANA) and directs the 30% Mutual-Aid & Patronage pool."}, {"id": "Desk03SolarAgniResourceAlchemy", "gate": "03 Solar Plexus \u00b7 528 Hz \u00b7 Manipura", "chakra": "solar", "name": "05 \u00b7 03 Solar Desk \u2014 Sattvic Agni, Ayurvedic Rasayana & $PRANA Minting", "site": "poweryogadiet.com", "site_url": "https://onecoded.github.io/poweryogadiet/", "icp_fn": "TheOneTrueDAO.evaluateDIAMission(#Desk03SolarAgniResourceAlchemy, ...)", "bt_fn": "PranaToken.sol (10 $PRANA/day + 2x/3x 30/108-Day Streak Multiplier)", "mission_brief": "Prescribes Vata/Pitta/Kapha Sattvic nutrition & 10 classical Ayurvedic herbs while minting non-speculative $PRANA from verified daily sadhana."}, {"id": "Desk02SacralCreativeArtCuration", "gate": "02 Sacral \u00b7 417 Hz \u00b7 Svadhisthana", "chakra": "sacral", "name": "06 \u00b7 02 Sacral Desk \u2014 108-Category Original Art Contest & Dyad Co-Regulation", "site": "tantricunity.com & onetruedao.com", "site_url": "https://onecoded.github.io/tantricunity/", "icp_fn": "TheOneTrueDAO.computeCreativeArtRaffleSplit(poolAmount)", "bt_fn": "EntangledPrisms Dyad Coherence (Privacy Zone 0 Sealed)", "mission_brief": "Runs the 108-Category Original Art Contest & Creative Earth-Healing Raffles (40% Artist / 30% Patron / 30% Earth Sanctuary) while keeping personal 02 Sacral data 100% sealed."}, {"id": "Desk01RootSanctuaryResilience", "gate": "01 Root \u00b7 396 Hz \u00b7 Muladhara", "chakra": "root", "name": "07 \u00b7 01 Root Desk \u2014 Physical Earth Sanctuary, Solar/Water & Seed Sovereignty", "site": "evolveearth.org & preprestore.com", "site_url": "https://onecoded.github.io/preprestore/", "icp_fn": "TheOneTrueDAO.evaluateDIAMission(#Desk01RootSanctuaryResilience, ...)", "bt_fn": "SoulSignature.sol (ERC-721 Prism) + PranaPool.sol Land Grants", "mission_brief": "Anchors the ERC-721 Prism mandala on Bittensor Subtensor EVM (Chain ID 964) and routes 30% of every DAO cycle into physical land, solar/water resilience, and heirloom seed vaults."}];
+
+function runDiaSimulation(announce) {
+  var deskId = document.getElementById('dia-desk').value;
+  var desk = DIA_DESK_DATA[0];
+  for (var i = 0; i < DIA_DESK_DATA.length; i++) {
+    if (DIA_DESK_DATA[i].id === deskId) {
+      desk = DIA_DESK_DATA[i];
+      break;
+    }
+  }
+  document.documentElement.setAttribute('data-chakra', desk.chakra);
+
+  var queryTxt = document.getElementById('dia-query').value || 'Verify longitudinal flow lift';
+  var poolUsd = Math.max(100, parseFloat(document.getElementById('dia-pool').value || '30000'));
+  var flowBefore = Math.min(100, Math.max(0, parseInt(document.getElementById('dia-flow-before').value || '64', 10)));
+  var flowNow = Math.min(100, Math.max(0, parseInt(document.getElementById('dia-flow-now').value || '88', 10)));
+  var days = Math.max(1, parseInt(document.getElementById('dia-days').value || '45', 10));
+
+  var streakMult = days >= 108 ? 3 : (days >= 30 ? 2 : 1);
+  var mirrorWeight = flowNow * days * streakMult;
+  var pranaMinted = days * 10 * streakMult;
+
+  var cohortDrift = 3.5;
+  var rawDelta = flowNow - flowBefore;
+  var liftOverCohort = rawDelta - cohortDrift;
+  var lagPassed = (days >= 14);
+  var decayWeight = Math.pow(0.5, days / 45.0);
+  var cappedLift = Math.min(25.0, Math.max(0.0, liftOverCohort));
+  var minerTaoScore = lagPassed ? +(cappedLift * decayWeight).toFixed(4) : 0.0;
+
+  var artist40 = Math.round(poolUsd * 0.40);
+  var patron30 = Math.round(poolUsd * 0.30);
+  var earth30 = Math.round(poolUsd * 0.30);
+
+  document.getElementById('dia-readout-summary').innerHTML =
+    '<span class="law-pill">' + desk.gate + '</span>' +
+    '<h3>' + desk.name + '</h3>' +
+    '<p>' + desk.mission_brief + '</p>' +
+    '<ul>' +
+    '<li><strong>Connected Portal:</strong> <a href="' + desk.site_url + '" target="_blank">' + desk.site + '</a></li>' +
+    '<li><strong>On-Chain <code>SoulSignature.flowOf()</code> Delta:</strong> <code>' + flowBefore + ' &rarr; ' + flowNow + ' / 100</code> (Net Lift Over Cohort: <code>+' + liftOverCohort.toFixed(1) + '</code>)</li>' +
+    '<li><strong>Bittensor Healing Subnet Score (<code>flourishing_reward.py</code>):</strong> <code>' + minerTaoScore + ' TAO Weight Units</code> (' + (lagPassed ? '14-Day Anti-Gaming Gate PASSED' : 'Requires &ge;14 Days') + ')</li>' +
+    '<li><strong><code>MirrorDAO</code> Governance Weight (Flow &times; Days &times; ' + streakMult + 'x Streak):</strong> <code>' + mirrorWeight.toLocaleString() + ' Votes</code> (Zero Plutocracy &bull; 1.618% Water-Law Cap)</li>' +
+    '<li><strong><code>PranaToken.sol</code> Minted:</strong> <code>' + pranaMinted.toLocaleString() + ' $PRANA</code></li>' +
+    '<li><strong>ICP 40 / 30 / 30 Treasury Disbursement:</strong> <code>$' + artist40.toLocaleString() + '</code> Creators/Healers &bull; <code>$' + patron30.toLocaleString() + '</code> Patrons/Witnesses &bull; <code>$' + earth30.toLocaleString() + '</code> Root Earth Sanctuary</li>' +
+    '</ul>';
+
+  document.getElementById('dia-code-out').textContent =
+    '// 1. ICP Motoko Canister (the_one_true_dao_canister.mo)
+' +
+    'await TheOneTrueDAO.evaluateDIAMission(
+' +
+    '  #' + desk.id + ',
+' +
+    '  soulFlowBefore = ' + flowBefore + ',
+' +
+    '  soulFlowNow = ' + flowNow + ',
+' +
+    '  practiceDays = ' + days + ',
+' +
+    '  cohortDrift = 3.5
+' +
+    ');
+
+' +
+    '// 2. ICP Chain-Key ECDSA -> Bittensor Subtensor EVM (Chain ID 964)
+' +
+    '// Mission: "' + queryTxt.replace(/"/g, "'") + '"
+' +
+    'MirrorDAO.castConstitutionalVote(
+' +
+    '  votingWeight: ' + mirrorWeight + ',
+' +
+    '  minerTaoRewardWeight: ' + minerTaoScore + ',
+' +
+    '  disbursementSplitUSD: [' + artist40 + ', ' + patron30 + ', ' + earth30 + '],
+' +
+    '  privacyZoneZeroSealed: true
+' +
+    ');';
+
+  if (announce) {
+    document.getElementById('dia-toast').textContent =
+      'Dispatched via ' + desk.id + ' — MirrorDAO Weight: ' + mirrorWeight.toLocaleString() +
+      ' | Bittensor Subnet Score: ' + minerTaoScore + ' TAO | Earth Sanctuary Grant: $' + earth30.toLocaleString();
+  }
+}
+
+async function bindDiaSubdomain() {
+  var toast = document.getElementById('dia-toast');
+  toast.textContent = 'Binding dia.onetruedao.com via Edge Publisher...';
+  try {
+    var r = await fetch('/api/domain-migration', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({action: 'bind_github_custom_domain', domain: 'dia.onetruedao.com', repo: 'dia-onetruedao'})
+    });
+    var d = await r.json();
+    toast.textContent = d.message || 'dia.onetruedao.com custom domain binding ready — add CNAME dia -> onecoded.github.io in DNS.';
+  } catch (e) {
+    toast.textContent = 'Edge repo onecoded/dia-onetruedao ready — add CNAME dia -> onecoded.github.io in your DNS panel.';
+  }
+}
+
+runDiaSimulation(false);
+</script>
+<script src="http://127.0.0.1:8655/ee-compact-deck.js" defer></script>
+<script src="/refineme-widget.js" defer></script>
+</body>
+</html>
